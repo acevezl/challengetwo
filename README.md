@@ -1,7 +1,10 @@
 # 02 Advanced CSS Challenge
 
+* [Description](#Description)
 * [User Story](#User-Story)
-* 
+
+# Description
+Professional portfolio to showcase my full-stack projects. Scropp down for user stor, wireframes, and acceptance criteria.
 
 # User Story
 ```
