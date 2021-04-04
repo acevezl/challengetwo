@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/styles.css">
-    
+    <!-- Script for showing / hiding top nav in mobile-->
+    <script src="./assets/js/menu.js"></script>
 
     <title>Luis Arnaut | Full-stack Developer</title>
 </head>
@@ -17,13 +18,17 @@
             <p>&lt;full-stack developer/&gt;</p>
         </div>
         <div class="desktop-menu">
-            <div class="topnav">
-
+            <div class="hamburger" onclick="toggleTopNav()">
             </div>
-            <div class="hamburger-menu">
-                <div class="hamburger">
-
-                </div>
+            <div class="topnav" id="top-nav">
+                <ul>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#my-work">My Work</a></li>
+                    <li><a href="https://github.com/acevezl" target="_blank">My GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/luisarnaut" target="_blank">My Resum&eacute;</a></li>
+                    <li><a href="#contact-me">Contact Me</a></li>
+                    <li onclick="closeTopNav()" class="closenav"><img src="./assets/images/ionic-ios-close-circle.png"/></li>
+                </ul>
             </div>
         </div>
     </header>
@@ -67,14 +72,14 @@
             
         </div>
     </section>
-
-    <section class="aboutme">
+    <a id="about-me"></a>
+    <section class="aboutme"> 
         <h2>About Me</h2>
         <p>I love working with people from all backgrounds, technical and non-techincal. I strongly believe that everyone has something to teach you, and we all have something to learn. Although I tend to gravitate around technical endeavours, I take the time to understand the business perspective and needs. I consider myself resourceful and able to speak at different levels of the organisation; I prefer to cut the red tape and simply approach problems from person to person.</p>
     </section>
-
+    <a id="my-work"></a>
     <section class="portfolio">
-        <h2>Work</h2>
+        <h2>My Work</h2>
         <article class="run-buddy">
             <div class="item-title">
                 <h3>Run-Buddy</h3>
@@ -92,27 +97,65 @@
                 <p>Online responsive accessibility</p>
             </div>
             <div class="item-description">
-                <p>Class project. This site implements latest CSS syntax and best practices for a quick responsive landing page.</p>
+                <p>Class project. Styled site in a way that makes the elements accesible and render in a responsive way.</p>
                 <a class="open-icon" href="https://acevezl.github.io/challengeone/" target="_blank" title="View Run Buddy in action"><img src="./assets/images/icon-awesome-external-link-square-alt.png"></a>
                 <a class="github-icon" href="https://github.com/acevezl/challengeone" title="Check out my Github repo" target="_blank"><img src="./assets/images/icon-awesome-github.png"></a>
             </div>
         </article>
-        <article>
-            <h3>Robot Gladiators</h3>
-            <p>Classic Javascript logic</p>
+        <article class="robohobos">
+            <div class="item-title">
+                <h3>Fightin' Robo Hobos</h3>
+                <p>Classic Javascript Logic</p>
+            </div>
+            <div class="item-description">
+                <p>Class project. Javascript mini-game of fighting homeless robots</p>
+                <a class="open-icon" href="https://github.com/acevezl/robot-gladiators" target="_blank" title="View Run Buddy in action"><img src="./assets/images/icon-awesome-external-link-square-alt.png"></a>
+                <a class="github-icon" href="https://github.com/acevezl/robot-gladiators" title="Check out my Github repo" target="_blank"><img src="./assets/images/icon-awesome-github.png"></a>
+            </div>
         </article>
-        <article>
-            <h3>Rock Paper Scissors</h3>
-            <p>Classic Javascript logic</p>
+        <article class="rock-paper-scissors">
+            <div class="item-title">
+                <h3>Rock Paper Scissors</h3>
+                <p>Classic Javascript logic</p>
+            </div>
+            <div class="item-description">
+                <p>Class project. Rock-Paper-Scissors game using basic Javascript</p>
+                <a class="open-icon" href="https://acevezl.github.io/rock-paper-scissors/" target="_blank" title="View Run Buddy in action"><img src="./assets/images/icon-awesome-external-link-square-alt.png"></a>
+                <a class="github-icon" href="https://github.com/acevezl/rock-paper-scissors" title="Check out my Github repo" target="_blank"><img src="./assets/images/icon-awesome-github.png"></a>
+            </div>
         </article>
-        <article>
-            <h3>Ranka Sanaci&oacute;n</h3>
-            <p>Live web customer</p>
+        <article class="ranka">
+            <div class="item-title">
+                <h3>Ranka Sanaci&oacute;n</h3>
+                <p>Live web customer</p>
+            </div>
+            <div class="item-description">
+                <p>Ranka Sanaci&oacute;n is a live website I built for my dear friend, and personal witch: Ranka</p>
+                <a class="open-icon" href="https://rankasanacion.com/" target="_blank" title="View Run Buddy in action"><img src="./assets/images/icon-awesome-external-link-square-alt.png"></a>
+            </div>
         </article>
-        <article>
-            <h3>Luis Ar&eacute;valo Psic&oacute;logo</h3>
-            <p>Live web customer</p>
+        <article class="luisarevalo">
+            <div class="item-title">
+                <h3>Luis Ar&eacute;valo Psic&oacute;logo</h3>
+                <p>Live web customer</p>
+            </div>
+            <div class="item-description">
+                <p>My newest web client: Luis Ar&eacute;valo, a good friend, and psico-terapist based in Ja&eacute;n, Spain</p>
+                <a class="open-icon" href="https://www.luisarevalopsicologo.com/" target="_blank" title="View Run Buddy in action"><img src="./assets/images/icon-awesome-external-link-square-alt.png"></a>
+            </div>
         </article>
+    </section>
+    <a id="contact-me"></a>
+    <section class="contactme">
+        <h2>Contact Me</h2>
+        <article class="contact-info">
+            <ul>
+                <li class="email-bullet"><a href="mailto:lou.arnaut@gmail.com">lou.arnaut@gmail.com</a></li>
+                <li class="phone-bullet"><a href="tel:+19139573706">+1 (913) 957 3706</a></li>
+                <li class="linkedin-bullet"><a href="https://www.linkedin.com/in/luisarnaut" target="_blank">Luis Arnaut</a></li>
+                <li class="instagram-bullet"><a href="https://www.instagram.com/monsieur.arnaut/" target="_blank">@monsieur.arnaut</a></li>
+            </ul>
+        </div>
     </section>
 
     <footer>

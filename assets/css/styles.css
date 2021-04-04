@@ -62,6 +62,7 @@ a {
 /* Fixed top nav sticks to the top */
 header {
     display: flex;
+    justify-content: space-between;
     background-color: var(--header-background-color);
     color: var(--header-foreground-color);
     padding: 30px;
@@ -71,6 +72,7 @@ header {
     z-index: 9999;
     box-shadow: 0 0 10px 0 black;
     width: 375px;
+    align-items: center;
 }
 
 header h1 {
@@ -84,8 +86,78 @@ header .logo-area p {
     color: var(--header-logo-color);
 }
 
+/* Desktop navigation styles */
 header .desktop-menu {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+
+header .desktop-menu .topnav, #top-nav {
     display: none;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    justify-content: center;
+    padding: 40px;
+    background-color: var(--header-background-color);
+    opacity: 0.95;
+    height: 60%;
+    top: 105px;
+}
+
+header .desktop-menu .topnav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header .desktop-menu .topnav ul li {
+    text-align: center;
+}
+
+header .desktop-menu .topnav ul li img {
+    height: 40x;
+    width: 40px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    opacity: 0.8;
+}
+
+header .desktop-menu .topnav ul li a {
+    padding: 10px 20px;
+    color:var(--header-foreground-color);
+    font-weight: bold;
+}
+
+header .desktop-menu .topnav ul li a:hover {
+    cursor: pointer;
+    border-color: var(--header-foreground-color);
+    background-color: var(--secondary-color);
+}
+
+header .desktop-menu .topnav ul li.closenav {
+    cursor: pointer;
+}
+
+header .desktop-menu .hamburger {
+    background-image: url('../images/hamburger-menu.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 30px;
+}
+
+header .desktop-menu .hamburger:hover {
+    cursor:pointer;
+}
+
+#about-me, #my-work, #contact-me {
+    top:-120px;
+    position: relative;
 }
 
 /* Section styles */
@@ -149,26 +221,26 @@ section {
     list-style-position: inside;
 }
 
-.bio .contact-info ul li a:hover {
+.contact-info ul li a:hover {
     color:var(--highlight-color);
 }
 
-.bio .contact-info ul li.email-bullet {
+.contact-info ul li.email-bullet {
     list-style-image: url('../images/email.svg');
 }
 
-.bio .contact-info ul li.phone-bullet {
+.contact-info ul li.phone-bullet {
     list-style-image: url('../images/voicemail.svg');
 }
 
-.bio .contact-info ul li.location-bullet {
+.contact-info ul li.location-bullet {
     list-style-image: url('../images/my-location.svg');
 }
 
-.bio .contact-info ul li.linkedin-bullet {
+.contact-info ul li.linkedin-bullet {
     list-style-image: url('../images/linkedin.svg');
 }
-.bio .contact-info ul li.instagram-bullet {
+.contact-info ul li.instagram-bullet {
     list-style-image: url('../images/instagram.svg');
 }
 
@@ -195,7 +267,7 @@ section {
     height: 380px;
 }
 
-.aboutme {
+.aboutme, .contactme {
     flex: 0 100%;
     display: flex;
     flex-direction: column;
@@ -203,15 +275,14 @@ section {
     padding: 20px;
 }
 
-.aboutme h2, .portfolio h2 {
+.aboutme h2, .portfolio h2, .contactme h2 {
     padding-bottom: 30px;
 }
 
-.aboutme p {
+.aboutme p, .contactme p {
     padding-bottom: 30px;
     line-height: 1.6;
 }
-
 
 .portfolio {
     flex: 0 100%;
@@ -264,11 +335,39 @@ section {
 }
 
 .portfolio .run-buddy {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.3)),url('../images/run-buddy.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)),url('../images/run-buddy.jpg');
 }
 
 .portfolio .horiseon {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.3)),url('../images/horiseon.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)),url('../images/horiseon.jpg');
+}
+
+.portfolio .robohobos {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)),url('../images/robo-hobo.jpeg');
+}
+
+.portfolio .rock-paper-scissors {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)),url('../images/rock-paper-scissors.png');
+}
+
+.portfolio .ranka {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)),url('../images/ranka.jpeg');
+}
+
+.portfolio .luisarevalo{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)),url('../images/luisarevalo.webp');
+}
+
+.contactme .contact-info ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 30px;
+}
+
+.contactme .contact-info ul li {
+    padding: 10px 0px;
 }
 
 footer {
@@ -331,6 +430,22 @@ footer p.disclaimer {
     .bio .contact-info ul li  {
         line-height: 1.8;
     }
+    .portfolio {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .portfolio h2 {
+        flex: 2 100%;
+    }
+    .portfolio article {
+        flex: 1 40%;
+    }
+    .portfolio article:nth-child(even) {
+        margin-right: 20px;
+    }
+    .contactme .contact-info ul {
+        flex-direction: row;
+    }
 }
 
 /* Media query for Tablets and iPads (768px to 1024px) */
@@ -344,15 +459,14 @@ footer p.disclaimer {
         background-position: center;
     }
     .bio, .hero-shot {
-        height: 600px;
+        height: 640px;
     }
     .bio .headshot, .bio .contact-info  {
         height: 300px;
     }
     .bio .intro-text {
-        height: 300px;
+        height: 340px;
     }
-
 }
 
 /* Media query for small desktop (1024px to 1200px) */
@@ -366,6 +480,34 @@ footer p.disclaimer {
     }
     .bio .intro-text {
         height: 350px;
+    }
+    .portfolio h2 {
+        flex: 3 100%;
+    }
+    .portfolio article {
+        flex: 1 30%;
+        margin-right: 20px;
+    }
+    header .desktop-menu .topnav, #top-nav {
+        display: flex;
+        position: static;
+        padding: 0;
+        width: auto;
+    }
+    header .desktop-menu .hamburger {
+        display: none;
+    }
+    header .desktop-menu .topnav ul {
+        flex-direction: row;
+    }
+    header .desktop-menu .topnav ul li:nth-child(5) a{
+        border-left: 2px solid;
+    }
+    header .desktop-menu .topnav ul li:last-child{
+        display: none;
+    }
+    header .desktop-menu .topnav ul a {
+        padding: 10px 20px;
     }
 }
 
