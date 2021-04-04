@@ -3,19 +3,64 @@
 * [Description](#Description)
 * [User Story](#User-Story)
 
-# Description
+## Description
 Professional portfolio to showcase my full-stack projects. Scropp down for user stor, wireframes, and acceptance criteria.
 
-# User Story
+## User Story
 ```
 AS AN employer
 I WANT to view a potential employee's deployed portfolio of work samples
 SO THAT I can review samples of their work and assess whether they're a good candidate for an open position
 ```
 
-# Wireframes
+## Wireframes
+![header wireframe](./assets/challenge-two-wireframe.png)
+![portfolio demo](./assets/02-advanced-css-homework-demo.gif)
 
-# Acceptance Criteria
+## Responsive Functionality
+
+- Design is responsive and adapts to various devices and screen resolutions. 
+- Top navigation adapts to various viewports:
+  - _Hamburger menu_ is displayed on smaller resolutions (under 1024px)
+    - Menu items on mobile devices occupy the full viewport width and display in a top-down fashion.
+  - _Regular menu_ is displayed on larger resolutions (over 1024px)
+    - Menu items adjust and space evenly when screen is resized
+  
+
+### Responsive Layout Breakpoints
+Layout is responsive and adapts to a variety of view ports:
+> XX-Small: Minimum viewport freezes at 375 px
+
+> X-Small: Viewport between 375px to 414px. Best for:
+> - iPhone 6/6S/6Plus, iPhone 7/7Plus, iPhone 8/8Plus
+> - iPhone X/XS/XSMax/XR
+> - Google Pixel (All versions) 
+> - Nexus 5X/6P 
+> - Galaxy Note 5/10/10+ 
+> - Samsung S7, S8, S9, S20 (including Edge and Plus versions)
+
+> Small: Viewport between 415px and 599px. Best for: 
+> - Large Android smartphones and iPhones in landscape mode:
+>   - Galaxy Note 5, 9, 10 (including Plus versions)
+>   - Samsung S7, S8, S9, S20 (including Edge and Plus versions) 
+>   - iPhone X/XS/XSMax/XR
+
+> Medium: Viewport between 600px and 767px. Best for:
+> - iPad Air, iPad Mini
+> - Android tablets (multiple size)
+
+> Large: Viewport between 768px and 1023px (newer Android tablets and iPads):
+> - iPad Air, iPad Mini (in landscape mode)
+> - Pixel C, Samsung Galaxy Tablets
+
+> X-large: Viewport between 1024px and 1199px. Best for:
+> - Desktop resolutions up to 1199px.
+> - iPad Pro
+
+> XX-large: Viewport larger than 1200px
+
+
+## Acceptance Criteria
 ```
 GIVEN I need to sample a potential employee's previous work
 WHEN I load their portfolio
