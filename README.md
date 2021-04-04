@@ -14,8 +14,12 @@ SO THAT I can review samples of their work and assess whether they're a good can
 ```
 
 ## Wireframes
-![header wireframe](./assets/challenge-two-wireframe.png)
-![portfolio demo](./assets/02-advanced-css-homework-demo.gif)
+
+### Mobile Vs Desktop layout
+![header wireframe](./assets/images/challenge-two-wireframe.png)
+
+### Portfolio grid demo 
+![portfolio demo](./assets/images/02-advanced-css-homework-demo.gif)
 
 ## Responsive Functionality
 
