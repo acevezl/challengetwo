@@ -2,6 +2,9 @@
 
 * [Description](#Description)
 * [User Story](#User-Story)
+* [Wireframes](#Wireframes)
+* [Responsive Functionality](#Responsive-Functionality)
+* [Acceptance Criteria](#Acceptance-Criteria)
 
 ## Description
 Professional portfolio to showcase my full-stack projects. Scropp down for user stor, wireframes, and acceptance criteria.
