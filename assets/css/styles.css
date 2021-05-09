@@ -344,6 +344,26 @@ section {
     background-position: top;
 }
 
+.portfolio .weather-fetch {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)),url('../images/weather-fetch.png');
+    background-position: top;
+}
+
+.portfolio .scheduler {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)),url('../images/scheduler.gif');
+    background-position: top;
+}
+
+.portfolio .quiz {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)),url('../images/js-quiz.png');
+    background-position: top;
+}
+
+.portfolio .password-generator {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)),url('../images/password-generator.png');
+    background-position: top;
+}
+
 .portfolio .run-buddy {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)),url('../images/run-buddy.jpg');
 }
